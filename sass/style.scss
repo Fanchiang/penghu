@@ -1,0 +1,587 @@
+@import 'compass/css3';
+$primary: #2a3781;
+$default: #333;
+$accent: #ffb11f;
+$shadow: rgba(0, 0, 0, 0.3);
+
+/* note extend */
+
+%after-cover {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+/* note font */
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+nav a {
+    /*font-family: 'Merriweather', serif;*/
+    font-family: 'Microsoft JhengHei';
+    font-weight: 500;
+    font-size: 26px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    color: $default;
+}
+
+.brand {
+    &:hover {
+        color: #cad178;
+        text-decoration: none;
+        border-top: 2px solid #fff;
+    }
+}
+
+.scroll-btn {
+    position: relative;
+    &:hover {
+        color: #a3d0e0;
+        text-decoration: underline;
+        text-decoration: none;
+        border-top: 2px solid #fff;
+    }
+    &:after {
+        content: ".";
+        display: block;
+        color: red;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+section h4 {
+    font-size: 24px;
+    color: blue;
+    text-indent: 2em;
+}
+
+section h1 {
+    font-size: 30px;
+    color: blue;
+}
+
+.col-md-4>h3 {
+    font-size: 26px;
+    color: orangered;
+    text-align: center;
+}
+
+.col-md-4>p {
+    font-size: 20px;
+    color: brown;
+}
+
+.section-title {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    position: relative;
+    word-spacing: 3px;
+    &:after {
+        position: absolute;
+        content: "";
+        width: 0px;
+        height: 0px;
+        background-color: $default;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: -20px;
+    }
+}
+
+.section-sub-title {
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: left;
+    word-spacing: 30px;
+}
+
+
+/* .section-sub-order {
+    text-align: inherit;
+     padding-left: 20px;
+    padding-right: 20px; 
+} */
+
+
+/* note nav */
+
+
+/* general nav */
+
+nav {
+    background-color: rgb(72, 104, 175);
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    padding-top: 0;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    @include transition(all 0.5s ease);
+    .brand {
+        font-size: 26px;
+        vertical-align: middle;
+        /* color: red; */
+    }
+    ul.nav-list {
+        list-style: none;
+        padding: 10;
+        li {
+            font-size: 26px;
+            text-align: center;
+        }
+    }
+}
+
+.carousel-inner .item [id^="slide"] {
+    overflow: hidden;
+    height: 530px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(157, 129, 163, 0.42);
+}
+
+#slide1 {
+    background-image: url(../img/index-outsidepark.jpg)
+}
+
+#slide2 {
+    background-image: url(../img/crab.jpg)
+}
+
+#slide3 {
+    background-image: url(../img/index-photo3.jpg)
+}
+
+.carousel-caption>h1 {
+    color: white;
+}
+
+div#mymap {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin: -150px 0 0 -300px;
+    overflow: auto;
+}
+
+
+/* mobile nav */
+
+@media screen and (max-width: 767px) {
+    nav {
+        background-color: white;
+        border-bottom: 1px solid #fff;
+        z-index: 1000;
+        @include box-shadow(0 0 10px $shadow);
+        .show-menu-btn {
+            width: 50px;
+            height: 50px;
+            border: none;
+            position: relative;
+            background-color: transparent;
+            left: 0;
+            top: 30px;
+            float: left;
+            &:after,
+            &:before {
+                position: absolute;
+                content: "";
+                width: 25px;
+                height: 2px;
+                background-color: $primary;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                @include transition(all .5s ease);
+            }
+            &:before {
+                top: 15px;
+                @include box-shadow(0 9px 0 $primary);
+            }
+            &:after {
+                bottom: 15px;
+            }
+            &.active {
+                &:before {
+                    transform: rotate3d(0, 0, 1, 45deg);
+                    top: 25px;
+                    @include box-shadow(none);
+                }
+                &:after {
+                    transform: rotate3d(0, 0, 1, -45deg);
+                    bottom: 23px;
+                }
+            }
+        }
+        .carousel-inner .item [id^="slide"] {
+            overflow: hidden;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgba(157, 129, 163, 0.42);
+        }
+        #slide1 {
+            background-image: url(img/index-outsidepark.jpg)
+        }
+        .brand {
+            color: $primary;
+            float: left;
+            top: 50%;
+            transform: translateY(50%);
+        }
+        ul.nav-list {
+            height: 100vh;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: white;
+            display: none;
+            &.active {
+                display: block;
+            }
+            li {
+                margin-right: 20px;
+                width: 100%;
+                margin-top: 30px;
+                a {
+                    color: $primary;
+                    font-size: 24px;
+                }
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            nav a {
+                /*font-family: 'Merriweather', serif;*/
+                font-family: 'Microsoft JhengHei';
+                font-weight: 500;
+                font-size: 20px;
+                width: 100%;
+                border: 0px;
+                padding-top: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+                margin: 0 auto;
+            }
+        }
+    }
+    .section-sub-title {
+        border: 0px;
+        text-align: center;
+        width: 400px;
+        height: 100%;
+    }
+}
+
+
+/* desktop nav */
+
+@media screen and (min-width: 768px) {
+    nav {
+        background-color: rgb(38, 44, 44);
+        border-bottom: 1px solid #fff;
+        border: 0px;
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 0 auto;
+        .brand {
+            color: white;
+        }
+        .show-menu-btn {
+            display: none;
+        }
+        ul.nav-list {
+            list-style: none;
+            padding: 0;
+            float: right;
+            li {
+                float: left;
+                margin-right: 20px;
+                a {
+                    color: rgb(195, 173, 195);
+                    font-size: 26px;
+                }
+            }
+        }
+        /*&.scroll {
+                    margin: 0 auto;
+                    background-color: white;
+                    @include box-shadow(0 0 10px $shadow);
+                    .brand {
+                        color: $primary;
+                    }
+                    .nav-list li a {
+                        color: $primary;
+                    }
+                }*/
+    }
+}
+
+
+/* note header */
+
+header.jumbotron {
+    height: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    &:after {
+        @extend %after-cover;
+        background-color: $shadow;
+    }
+    .container {
+        position: relative;
+        z-index: 5;
+    }
+    * {
+        color: white;
+    }
+    img {
+        margin: 0 auto;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    .header-content {
+        margin-top: 150px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    .header-scroll-down-btn {
+        display: block;
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        i.fa {
+            color: white;
+        }
+        &:hover i.fa {
+            color: #eee;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    header.jumbotron {
+        height: 100vh;
+        position: relative;
+        padding-bottom: 0;
+        .header-content {
+            display: none;
+        }
+        .header-scroll-down-btn {
+            position: relative;
+            bottom: 0;
+        }
+    }
+}
+
+
+/* note section */
+
+%section-padding {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+section {
+    @extend %section-padding;
+}
+
+
+/* note basicIntronSection */
+
+section#basicIntronSection {
+    h3 {
+        text-align: center;
+    }
+    .icon {
+        text-align: center;
+        color: $primary;
+    }
+    img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        //@include filter(grayscale(100%));
+        @include transition(all 0.5s ease);
+    }
+    .portrait {
+        width: 100px;
+        height: 100px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+
+/* note news facilty roomType Section*/
+
+section#newsSection,
+section#roomTypeSection,
+section#travelSitesSection {
+    h3 {
+        text-align: center;
+        align-content: center;
+    }
+    img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        //@include filter(grayscale(100%));
+        @include transition(all 0.5s ease);
+    }
+}
+
+
+/* note travelsites travelSitesSectionLink*/
+
+section#travelSitesSectionLink {
+    h3 {
+        text-align: center;
+        align-content: center;
+    }
+    a {
+        padding-left: 100px;
+        font-size: 40px;
+        position: fixed;
+        padding: 100px;
+        text-align: right;
+        color: red;
+        float: right;
+    }
+    p {
+        padding-left: 100px;
+        float: left;
+    }
+    img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        //@include filter(grayscale(100%));
+        @include transition(all 0.5s ease);
+    }
+}
+
+
+/* note orderNotice */
+
+section#orderNoticeSection {
+    h3 {
+        text-align: left;
+        align-content: center;
+        color: red;
+    }
+    img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        //@include filter(grayscale(100%));
+        @include transition(all 0.5s ease);
+    }
+    [class^='col-'] {
+        padding-right: 10px;
+        position: relative;
+    }
+    p> .notice {
+        color: red;
+    }
+}
+
+
+/* note gallerySection */
+
+section#gallerySection,
+section#facilitySection,
+travelSitesSection {
+    padding-top: 0;
+    padding-bottom: 0;
+    [class^='col-'] {
+        padding: 0;
+        position: relative;
+        &:hover h5 {
+            opacity: 1;
+            font-size: 26px;
+        }
+        &:hover img {
+            @include filter(grayscale(0%));
+        }
+    }
+    h5 {
+        position: absolute;
+        z-index: 5;
+        //top: 5%;
+        bottom: 5%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 6px;
+        color: white;
+        text-shadow: 0 0 3px $shadow;
+        opacity: 0;
+        @include transition(all 0.5s ease);
+    }
+    img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        //@include filter(grayscale(100%));
+        @include transition(all 0.5s ease);
+    }
+}
+
+
+/* note footer */
+
+footer {
+    @extend %section-padding;
+    min-height: 200px;
+    background-color: $primary;
+    .section-title:after {
+        background-color: #fff;
+    }
+    * {
+        color: white;
+        text-align: center;
+    }
+}

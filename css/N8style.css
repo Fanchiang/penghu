@@ -1,0 +1,38 @@
+body {
+    min-height: 5000px;
+}
+
+.jumbotron {
+    height: 180px;
+    background-image: url(../img/2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotron .page-header * {
+    color: white;
+}
+
+.carousel-inner .item [id^="slide"] {
+    height: 350px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(157, 129, 163, 0.42);
+}
+
+#slide1 {
+    background-image: url(https://unsplash.it/700/350?image=200)
+}
+
+#slide2 {
+    background-image: url(https://unsplash.it/700/350?image=201)
+}
+
+#slide3 {
+    background-image: url(https://unsplash.it/700/350?image=202)
+}
+
+#slide4 {
+    background-image: url(https://unsplash.it/700/350?image=203)
+}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>My Website</title>
+    <!-- note normalize.min.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" />
+
+    <!-- note bootstrap.min.css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- note animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- note font-awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- basic.css -->
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- note nav -->
+    <nav>
+        <!-- 漢堡按鈕 -->
+        <button class="show-menu-btn" id="showMenuBtn"></button>
+        <a href="" class="brand"><font color="#cad178">漁鄉魚香 民宿</font></a>
+        <ul class="nav-list">
+            <li>
+                <a class="scroll-btn" href="basicintro.html">漁鄉簡介</a>
+            </li>
+            <li>
+                <a class="scroll-btn" href="news.html">最新消息</a>
+            </li>
+            <li>
+                <a class="scroll-btn" href="facility.html">民宿設施</a>
+            </li>
+
+            <li>
+                <a class="scroll-btn" href="roomtype.html">房型介紹</a>
+            </li>
+            <li>
+                <a class="scroll-btn" href="ordernotice.html">訂房需知</a>
+            </li>
+            <li>
+                <a class="scroll-btn" href="access.html">交通資訊</a>
+            </li>
+
+            <li>
+                <a class="scroll-btn" href="travelsites.html">近郊景點</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- nav end -->
+
+    <!-- note header -->
+
+
+    <!-- <header class="jumbotron" id="header">
+        <div class="container-floid">
+            <div class="row">
+                <div class="col-md-8">
+                    <img src="img/index-outsidepark.jpg" alt="">
+                </div>
+                <div class="col-md-12">
+                    <div class="header-content">
+                        <h1 class="header-title">Life can get easier</h1>
+                        <h3 class="header-subtitle">You just get stronger</h3>
+                    </div>
+                </div>
+            </div>
+            <a href="#basicIntronSection" class="scroll-btn header-scroll-down-btn"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+        </div>
+    </header> -->
+
+
+
+    <!-- header end -->
+    <section id="carouselSection">
+        <div class="carousel slide" id="carousel1" data-ride="carousel" data-interval="3000">
+            <!--  小圓點 -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel1" data-slide-to="1"></li>
+                <li data-target="#carousel1" data-slide-to="2"></li>
+                <!-- <li data-target="#carousel1" data-slide-to="3"></li> -->
+            </ol>
+            <!-- 內容 -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div id="slide1">
+                        <div class="carousel-caption">
+                            <h1>中庭花園</h1>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div id="slide2">
+                        <div class="carousel-caption">
+                            <h1>附近沙攤</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div id="slide3">
+                        <div class="carousel-caption">
+                            <h1>附近海景</h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="item">
+                    <div id="slide4">
+                        <div class="carousel-caption">
+                            <h1>鯨魚洞</h1>
+                            <p>鯨魚洞</p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <!--  前一張按鈕&後一張按鈕 -->
+            <div class="control-btn">
+                <!--  前一張 -->
+                <a href="#carousel1" data-slide="prev" class="left carousel-control">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <!--  後一張 -->
+                    <a href="#carousel1" data-slide="next" class="right carousel-control">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- note basic-intro-section -->
+    <section id="basicIntronSection">
+        <h1 class="section-title">漁鄉魚香 簡介</h1>
+        <!-- <img class="portrait img-circle" src="img/portrait.jpg" alt=""> -->
+        <h4 class="section-sub-title">漁鄉魚香民宿位於白沙鄉港子村，是澎湖本島的中心位置。站在40坪的陽台上看到360度的美麗海景，可將附近無人島的風采盡收眼底。往西邊可清晰看到跨海大橋、西嶼山頭、大倉島；往南看可看到西衛、觀音亭、鎮海灣；往東看員貝、活龍灘、雞善、錠鉤、鳥嶼、小白沙等東海無人島；往北看屈爪、赤崁，由近而遠、由高而低如在眼前，不管漲潮、退潮，不管日出日落，都有非常迷人的景色。</h4>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/intro-beach.jpg" alt="">
+                </div>
+                <div class="col-md-4">
+                    <img src="img/intro-island.jpg" alt="">
+                </div>
+                <div class="col-md-4">
+                    <img src="img/intro-crab.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <h4 class="section-sub-title">往西到西嶼各景點騎車只要20到35分，往南到馬公市區只要15到20分；往東到湖西各景點只要20到40分；往北到赤崁騎車只要5分鐘。</h4>
+
+        <h4 class="section-sub-title">騎單車：民宿免費提供捷安特單車，5分鐘到岐頭水族館，3分鐘到鎮海灣沙灘，15分鐘到後寮碼頭和跨海大橋，10分中到赤崁遊艇碼頭，走路5分鐘到美東方牛肉麵館和港子公車站。</h4>
+
+        <h4 class="section-sub-title">附近有很棒的私房景點，早晨黃昏到鎮海灣散步，享受寧靜、休閒，海景變化萬千；也可以到港子和岐頭海域觀賞招潮蟹和紅樹林，甚至退潮時還可走到潮間帶撿螺貝抓螃蟹等活動；到赤崁魚貨碼頭買海鮮看漁船卸魚蝦，現買幾斤回民宿簡單料理，品嘗甜美海鮮。</h4>
+
+
+    </section>
+    <!-- basic-intro-section end -->
+
+    <!-- note news -->
+
+    <!-- note news end-->
+
+    <!-- note facility section-->
+
+    <!-- facility-section end -->
+
+    <!-- note facility end-->
+
+    <!-- note roomType -->
+
+    <!-- roomType section end -->
+
+
+    <!-- note orderNotice -->
+
+    <!-- note orderNotice end-->
+
+    <!-- note award-section -->
+    <!--
+    <section id="awardSection">
+        <div class="container">
+            <div class="award-icons wow bounceIn">
+                <img src="img/if-logo.png" alt="" height="200px">
+                <img src="img/award-logo.png" alt="" height="200px">
+            </div>
+        </div>
+    </section>
+    --!>
+    <!-- award-section end -->
+    <!-- note gallery-section -->
+
+    <!-- gallery-section end -->
+    <!-- note footer -->
+    <footer id="footer">
+        <h1 class="section-title">漁鄉魚香 聯絡</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="icon wow bounceIn">
+                        <i class="fa fa-address-card fa-5x"></i>
+                        <h4>884 澎湖縣白沙鄉港子村9鄰港子107之2號</h4>
+                    </div>
+
+                    <!--<a href="">tzen1029@gmail.com</a>-->
+                </div>
+                <div class="col-md-3">
+                    <div class="icon wow bounceIn">
+                        <i class="fa fa-phone fa-5x"></i>
+                    </div>
+                    <h4>06-9933-218</h4>
+                    <h4>0934-088-707</h4>
+                </div>
+                <div class="col-md-3">
+                    <div class="icon wow bounceIn">
+                        <i class="fa fa-envelope fa-5x"></i>
+                        <!--  <h4>yusiangyusiang@gmail.com</h4> -->
+                        <a href="mailto:yusiangyusiang@gmail.com">
+                            <h3>yusiangyusiang@gmail.com</h3></a>
+                    </div>
+
+                    <!--<a href="">tzen1029@gmail.com</a>-->
+                </div>
+                <div class="col-md-2">
+                    <div class="icon wow bounceIn">
+                        <a href="https://www.facebook.com/%E6%BE%8E%E6%B9%96%E6%B0%91%E5%AE%BF-%E6%BC%81%E9%84%89%E9%AD%9A%E9%A6%99-428925927467743/?ref=page_internal" target="_blank"><i class="fa fa-facebook-square fa-5x"></i></a>
+                        <!-- <img src="img/linecode.jpg" width="90" height="110" alt=""> -->
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-1">
+                    <div class="icon wow bounceIn">
+
+                        <img src="img/linecode.jpg" width="90" height="110" alt="">
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="social-media-links">
+            <!-- todo social-media-links -->
+        </div>
+    </footer>
+    <!-- footer end -->
+    <!-- note jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- note jQuery Easing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <!-- note bootstrap.js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- note wow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
